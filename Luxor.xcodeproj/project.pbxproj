@@ -17,8 +17,7 @@
 		E333F411172B1F300089410C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E333F410172B1F300089410C /* Default@2x.png */; };
 		E333F413172B1F300089410C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E333F412172B1F300089410C /* Default-568h@2x.png */; };
 		E333F416172B1F300089410C /* LXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F415172B1F300089410C /* LXViewController.m */; };
-		E333F419172B1F300089410C /* LXViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E333F417172B1F300089410C /* LXViewController_iPhone.xib */; };
-		E333F41C172B1F300089410C /* LXViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E333F41A172B1F300089410C /* LXViewController_iPad.xib */; };
+		E3B614E7172B263E00D017CB /* LXFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B614E6172B263E00D017CB /* LXFeed.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +36,8 @@
 		E333F412172B1F300089410C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E333F414172B1F300089410C /* LXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXViewController.h; sourceTree = "<group>"; };
 		E333F415172B1F300089410C /* LXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXViewController.m; sourceTree = "<group>"; };
-		E333F418172B1F300089410C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LXViewController_iPhone.xib; sourceTree = "<group>"; };
-		E333F41B172B1F300089410C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LXViewController_iPad.xib; sourceTree = "<group>"; };
+		E3B614E5172B263E00D017CB /* LXFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFeed.h; sourceTree = "<group>"; };
+		E3B614E6172B263E00D017CB /* LXFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFeed.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +86,9 @@
 			children = (
 				E333F40B172B1F300089410C /* LXAppDelegate.h */,
 				E333F40C172B1F300089410C /* LXAppDelegate.m */,
-				E333F414172B1F300089410C /* LXViewController.h */,
-				E333F415172B1F300089410C /* LXViewController.m */,
-				E333F417172B1F300089410C /* LXViewController_iPhone.xib */,
-				E333F41A172B1F300089410C /* LXViewController_iPad.xib */,
+				E3B614E4172B22EE00D017CB /* Models */,
+				E3B614E3172B223700D017CB /* DataControllers */,
+				E3B614E2172B21BC00D017CB /* ViewControllers */,
 				E333F403172B1F300089410C /* Supporting Files */,
 			);
 			path = Luxor;
@@ -108,6 +106,31 @@
 				E333F412172B1F300089410C /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3B614E2172B21BC00D017CB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E333F414172B1F300089410C /* LXViewController.h */,
+				E333F415172B1F300089410C /* LXViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E3B614E3172B223700D017CB /* DataControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataControllers;
+			sourceTree = "<group>";
+		};
+		E3B614E4172B22EE00D017CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E3B614E5172B263E00D017CB /* LXFeed.h */,
+				E3B614E6172B263E00D017CB /* LXFeed.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +189,6 @@
 				E333F40F172B1F300089410C /* Default.png in Resources */,
 				E333F411172B1F300089410C /* Default@2x.png in Resources */,
 				E333F413172B1F300089410C /* Default-568h@2x.png in Resources */,
-				E333F419172B1F300089410C /* LXViewController_iPhone.xib in Resources */,
-				E333F41C172B1F300089410C /* LXViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +202,7 @@
 				E333F409172B1F300089410C /* main.m in Sources */,
 				E333F40D172B1F300089410C /* LXAppDelegate.m in Sources */,
 				E333F416172B1F300089410C /* LXViewController.m in Sources */,
+				E3B614E7172B263E00D017CB /* LXFeed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,22 +215,6 @@
 				E333F406172B1F300089410C /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E333F417172B1F300089410C /* LXViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E333F418172B1F300089410C /* en */,
-			);
-			name = LXViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		E333F41A172B1F300089410C /* LXViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E333F41B172B1F300089410C /* en */,
-			);
-			name = LXViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -313,6 +319,7 @@
 				E333F421172B1F300089410C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
