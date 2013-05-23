@@ -7,23 +7,25 @@
 //
 
 #import "LXViewController.h"
+// Models
+#import "LXFeed.h"
 
 @interface LXViewController ()
+
+@property (nonatomic, readwrite, strong) NSMutableArray *videos;
+@property (nonatomic, readwrite, strong) UITableView *tableView;
+
+@property (nonatomic, readwrite, strong) LXFeed *feed;
 
 @end
 
 @implementation LXViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
+    NSURL *url = [NSURL URLWithString:@"http://localhost/channel.xml"];
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.feed = [LXFeed feedFromURL:url];
 }
 
 @end

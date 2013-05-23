@@ -18,6 +18,14 @@
 		E333F413172B1F300089410C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E333F412172B1F300089410C /* Default-568h@2x.png */; };
 		E333F416172B1F300089410C /* LXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F415172B1F300089410C /* LXViewController.m */; };
 		E3B614E7172B263E00D017CB /* LXFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B614E6172B263E00D017CB /* LXFeed.m */; };
+		E3B615E8172B340B00D017CB /* LXVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B615E7172B340B00D017CB /* LXVideo.m */; };
+		E3B615ED172B347100D017CB /* LXVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B615EC172B347100D017CB /* LXVideoView.m */; };
+		E3B615F0172B347F00D017CB /* LXVideoControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B615EF172B347F00D017CB /* LXVideoControlsView.m */; };
+		E3B615F2172B354500D017CB /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B615F1172B354500D017CB /* AFNetworking.framework */; };
+		E3B615F5172B35FA00D017CB /* LXFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B615F4172B35FA00D017CB /* LXFeedParser.m */; };
+		E3B615F7172B3E6400D017CB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B615F6172B3E6400D017CB /* MobileCoreServices.framework */; };
+		E3B615F9172B3E6B00D017CB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B615F8172B3E6A00D017CB /* SystemConfiguration.framework */; };
+		E3CF968A174EB26F00D67968 /* LXItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CF9689174EB26E00D67968 /* LXItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +46,19 @@
 		E333F415172B1F300089410C /* LXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXViewController.m; sourceTree = "<group>"; };
 		E3B614E5172B263E00D017CB /* LXFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFeed.h; sourceTree = "<group>"; };
 		E3B614E6172B263E00D017CB /* LXFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFeed.m; sourceTree = "<group>"; };
+		E3B615E6172B340B00D017CB /* LXVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXVideo.h; sourceTree = "<group>"; };
+		E3B615E7172B340B00D017CB /* LXVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXVideo.m; sourceTree = "<group>"; };
+		E3B615EB172B347100D017CB /* LXVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXVideoView.h; sourceTree = "<group>"; };
+		E3B615EC172B347100D017CB /* LXVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXVideoView.m; sourceTree = "<group>"; };
+		E3B615EE172B347F00D017CB /* LXVideoControlsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXVideoControlsView.h; sourceTree = "<group>"; };
+		E3B615EF172B347F00D017CB /* LXVideoControlsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXVideoControlsView.m; sourceTree = "<group>"; };
+		E3B615F1172B354500D017CB /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = External/AFNetworking.framework; sourceTree = "<group>"; };
+		E3B615F3172B35FA00D017CB /* LXFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFeedParser.h; sourceTree = "<group>"; };
+		E3B615F4172B35FA00D017CB /* LXFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFeedParser.m; sourceTree = "<group>"; };
+		E3B615F6172B3E6400D017CB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E3B615F8172B3E6A00D017CB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E3CF9688174EB26E00D67968 /* LXItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXItem.h; sourceTree = "<group>"; };
+		E3CF9689174EB26E00D67968 /* LXItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,9 +66,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3B615F9172B3E6B00D017CB /* SystemConfiguration.framework in Frameworks */,
+				E3B615F7172B3E6400D017CB /* MobileCoreServices.framework in Frameworks */,
 				E333F3FD172B1F300089410C /* UIKit.framework in Frameworks */,
 				E333F3FF172B1F300089410C /* Foundation.framework in Frameworks */,
 				E333F401172B1F300089410C /* CoreGraphics.framework in Frameworks */,
+				E3B615F2172B354500D017CB /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +98,9 @@
 		E333F3FB172B1F300089410C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3B615F8172B3E6A00D017CB /* SystemConfiguration.framework */,
+				E3B615F6172B3E6400D017CB /* MobileCoreServices.framework */,
+				E3B615F1172B354500D017CB /* AFNetworking.framework */,
 				E333F3FC172B1F300089410C /* UIKit.framework */,
 				E333F3FE172B1F300089410C /* Foundation.framework */,
 				E333F400172B1F300089410C /* CoreGraphics.framework */,
@@ -87,8 +114,8 @@
 				E333F40B172B1F300089410C /* LXAppDelegate.h */,
 				E333F40C172B1F300089410C /* LXAppDelegate.m */,
 				E3B614E4172B22EE00D017CB /* Models */,
-				E3B614E3172B223700D017CB /* DataControllers */,
-				E3B614E2172B21BC00D017CB /* ViewControllers */,
+				E3B615E9172B342400D017CB /* Views */,
+				E3B615EA172B342C00D017CB /* Controllers */,
 				E333F403172B1F300089410C /* Supporting Files */,
 			);
 			path = Luxor;
@@ -120,6 +147,8 @@
 		E3B614E3172B223700D017CB /* DataControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E3B615F3172B35FA00D017CB /* LXFeedParser.h */,
+				E3B615F4172B35FA00D017CB /* LXFeedParser.m */,
 			);
 			name = DataControllers;
 			sourceTree = "<group>";
@@ -127,10 +156,34 @@
 		E3B614E4172B22EE00D017CB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E3CF9688174EB26E00D67968 /* LXItem.h */,
+				E3CF9689174EB26E00D67968 /* LXItem.m */,
 				E3B614E5172B263E00D017CB /* LXFeed.h */,
 				E3B614E6172B263E00D017CB /* LXFeed.m */,
+				E3B615E6172B340B00D017CB /* LXVideo.h */,
+				E3B615E7172B340B00D017CB /* LXVideo.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		E3B615E9172B342400D017CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E3B615EB172B347100D017CB /* LXVideoView.h */,
+				E3B615EC172B347100D017CB /* LXVideoView.m */,
+				E3B615EE172B347F00D017CB /* LXVideoControlsView.h */,
+				E3B615EF172B347F00D017CB /* LXVideoControlsView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E3B615EA172B342C00D017CB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3B614E2172B21BC00D017CB /* ViewControllers */,
+				E3B614E3172B223700D017CB /* DataControllers */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +256,11 @@
 				E333F40D172B1F300089410C /* LXAppDelegate.m in Sources */,
 				E333F416172B1F300089410C /* LXViewController.m in Sources */,
 				E3B614E7172B263E00D017CB /* LXFeed.m in Sources */,
+				E3B615E8172B340B00D017CB /* LXVideo.m in Sources */,
+				E3B615ED172B347100D017CB /* LXVideoView.m in Sources */,
+				E3B615F0172B347F00D017CB /* LXVideoControlsView.m in Sources */,
+				E3B615F5172B35FA00D017CB /* LXFeedParser.m in Sources */,
+				E3CF968A174EB26F00D67968 /* LXItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +339,10 @@
 		E333F420172B1F300089410C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/External\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Luxor/Luxor-Prefix.pch";
 				INFOPLIST_FILE = "Luxor/Luxor-Info.plist";
@@ -292,6 +354,10 @@
 		E333F421172B1F300089410C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/External\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Luxor/Luxor-Prefix.pch";
 				INFOPLIST_FILE = "Luxor/Luxor-Info.plist";
