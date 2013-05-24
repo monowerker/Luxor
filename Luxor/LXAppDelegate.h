@@ -13,7 +13,6 @@
 @interface LXAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) LXViewController *viewController;
+@property (strong, nonatomic) id viewController;
 
 @end

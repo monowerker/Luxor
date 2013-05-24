@@ -18,6 +18,10 @@
 @property (nonatomic, readwrite, strong) NSString   *description;
 @property (nonatomic, readwrite, strong) NSString   *language;
 @property (nonatomic, readwrite, strong) NSArray    *items;
+@property (nonatomic, readwrite, strong) NSString   *imageURLString;
+@property (nonatomic, readwrite, strong) NSString   *imageTitle;
+@property (nonatomic, readwrite, strong) NSString   *imageLink;
+@property (nonatomic, readonly,  strong) UIImage    *image;
 
 + (id)feedFromURL:(NSURL *)url;
 

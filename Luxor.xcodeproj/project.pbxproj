@@ -16,7 +16,18 @@
 		E333F40F172B1F300089410C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E333F40E172B1F300089410C /* Default.png */; };
 		E333F411172B1F300089410C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E333F410172B1F300089410C /* Default@2x.png */; };
 		E333F413172B1F300089410C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E333F412172B1F300089410C /* Default-568h@2x.png */; };
-		E333F416172B1F300089410C /* LXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F415172B1F300089410C /* LXViewController.m */; };
+		E373A0FA175217BB003D4FB3 /* UIColor+LXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E373A0F9175217BB003D4FB3 /* UIColor+LXAdditions.m */; };
+		E373A0FD175220AD003D4FB3 /* UIFont+LXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E373A0FC175220AD003D4FB3 /* UIFont+LXAdditions.m */; };
+		E373A10117522EE5003D4FB3 /* IADrawingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E373A10017522EE5003D4FB3 /* IADrawingUtilities.m */; };
+		E373A10517523B3D003D4FB3 /* LXItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E373A10417523B3D003D4FB3 /* LXItemsViewController.m */; };
+		E373A10F17525B81003D4FB3 /* LXItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E373A10E17525B81003D4FB3 /* LXItemCell.m */; };
+		E373A1141752654B003D4FB3 /* NSObject+IAExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = E373A1111752654B003D4FB3 /* NSObject+IAExtras.m */; };
+		E373A1151752654B003D4FB3 /* UIGestureRecognizer+IAExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = E373A1131752654B003D4FB3 /* UIGestureRecognizer+IAExtras.m */; };
+		E391B135174FFF14009A8C1B /* LXFeedsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E391B134174FFF13009A8C1B /* LXFeedsViewController.m */; };
+		E391B13F17500449009A8C1B /* LXFeedsCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E391B13E17500449009A8C1B /* LXFeedsCollectionViewLayout.m */; };
+		E391B143175006FD009A8C1B /* LXFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E391B142175006FD009A8C1B /* LXFeedCell.m */; };
+		E3AA227317512B3B00AD895E /* MAKVONotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AA227217512B3B00AD895E /* MAKVONotificationCenter.framework */; };
+		E3AA22751751393600AD895E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AA22741751393600AD895E /* QuartzCore.framework */; };
 		E3B614E7172B263E00D017CB /* LXFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B614E6172B263E00D017CB /* LXFeed.m */; };
 		E3B615E8172B340B00D017CB /* LXVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B615E7172B340B00D017CB /* LXVideo.m */; };
 		E3B615ED172B347100D017CB /* LXVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B615EC172B347100D017CB /* LXVideoView.m */; };
@@ -42,8 +53,29 @@
 		E333F40E172B1F300089410C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E333F410172B1F300089410C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E333F412172B1F300089410C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E333F414172B1F300089410C /* LXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXViewController.h; sourceTree = "<group>"; };
-		E333F415172B1F300089410C /* LXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXViewController.m; sourceTree = "<group>"; };
+		E373A0F8175217BB003D4FB3 /* UIColor+LXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LXAdditions.h"; sourceTree = "<group>"; };
+		E373A0F9175217BB003D4FB3 /* UIColor+LXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LXAdditions.m"; sourceTree = "<group>"; };
+		E373A0FB175220AD003D4FB3 /* UIFont+LXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+LXAdditions.h"; sourceTree = "<group>"; };
+		E373A0FC175220AD003D4FB3 /* UIFont+LXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+LXAdditions.m"; sourceTree = "<group>"; };
+		E373A0FF17522EE5003D4FB3 /* IADrawingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IADrawingUtilities.h; sourceTree = "<group>"; };
+		E373A10017522EE5003D4FB3 /* IADrawingUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IADrawingUtilities.m; sourceTree = "<group>"; };
+		E373A10317523B3D003D4FB3 /* LXItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXItemsViewController.h; sourceTree = "<group>"; };
+		E373A10417523B3D003D4FB3 /* LXItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXItemsViewController.m; sourceTree = "<group>"; };
+		E373A10D17525B81003D4FB3 /* LXItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXItemCell.h; sourceTree = "<group>"; };
+		E373A10E17525B81003D4FB3 /* LXItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXItemCell.m; sourceTree = "<group>"; };
+		E373A1101752654B003D4FB3 /* NSObject+IAExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+IAExtras.h"; sourceTree = "<group>"; };
+		E373A1111752654B003D4FB3 /* NSObject+IAExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+IAExtras.m"; sourceTree = "<group>"; };
+		E373A1121752654B003D4FB3 /* UIGestureRecognizer+IAExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+IAExtras.h"; sourceTree = "<group>"; };
+		E373A1131752654B003D4FB3 /* UIGestureRecognizer+IAExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+IAExtras.m"; sourceTree = "<group>"; };
+		E373A11617526555003D4FB3 /* IACoreKitGlobals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IACoreKitGlobals.h; sourceTree = "<group>"; };
+		E391B133174FFF13009A8C1B /* LXFeedsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFeedsViewController.h; sourceTree = "<group>"; };
+		E391B134174FFF13009A8C1B /* LXFeedsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFeedsViewController.m; sourceTree = "<group>"; };
+		E391B13D17500449009A8C1B /* LXFeedsCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFeedsCollectionViewLayout.h; sourceTree = "<group>"; };
+		E391B13E17500449009A8C1B /* LXFeedsCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFeedsCollectionViewLayout.m; sourceTree = "<group>"; };
+		E391B141175006FD009A8C1B /* LXFeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFeedCell.h; sourceTree = "<group>"; };
+		E391B142175006FD009A8C1B /* LXFeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFeedCell.m; sourceTree = "<group>"; };
+		E3AA227217512B3B00AD895E /* MAKVONotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAKVONotificationCenter.framework; path = External/MAKVONotificationCenter.framework; sourceTree = "<group>"; };
+		E3AA22741751393600AD895E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E3B614E5172B263E00D017CB /* LXFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFeed.h; sourceTree = "<group>"; };
 		E3B614E6172B263E00D017CB /* LXFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFeed.m; sourceTree = "<group>"; };
 		E3B615E6172B340B00D017CB /* LXVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXVideo.h; sourceTree = "<group>"; };
@@ -66,12 +98,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3AA22751751393600AD895E /* QuartzCore.framework in Frameworks */,
 				E3B615F9172B3E6B00D017CB /* SystemConfiguration.framework in Frameworks */,
 				E3B615F7172B3E6400D017CB /* MobileCoreServices.framework in Frameworks */,
 				E333F3FD172B1F300089410C /* UIKit.framework in Frameworks */,
 				E333F3FF172B1F300089410C /* Foundation.framework in Frameworks */,
 				E333F401172B1F300089410C /* CoreGraphics.framework in Frameworks */,
 				E3B615F2172B354500D017CB /* AFNetworking.framework in Frameworks */,
+				E3AA227317512B3B00AD895E /* MAKVONotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +132,8 @@
 		E333F3FB172B1F300089410C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3AA22741751393600AD895E /* QuartzCore.framework */,
+				E3AA227217512B3B00AD895E /* MAKVONotificationCenter.framework */,
 				E3B615F8172B3E6A00D017CB /* SystemConfiguration.framework */,
 				E3B615F6172B3E6400D017CB /* MobileCoreServices.framework */,
 				E3B615F1172B354500D017CB /* AFNetworking.framework */,
@@ -116,6 +152,8 @@
 				E3B614E4172B22EE00D017CB /* Models */,
 				E3B615E9172B342400D017CB /* Views */,
 				E3B615EA172B342C00D017CB /* Controllers */,
+				E373A0F717521798003D4FB3 /* Categories */,
+				E373A0FE17522ECF003D4FB3 /* Helpers */,
 				E333F403172B1F300089410C /* Supporting Files */,
 			);
 			path = Luxor;
@@ -135,11 +173,61 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E373A0F717521798003D4FB3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				E373A11617526555003D4FB3 /* IACoreKitGlobals.h */,
+				E373A1101752654B003D4FB3 /* NSObject+IAExtras.h */,
+				E373A1111752654B003D4FB3 /* NSObject+IAExtras.m */,
+				E373A1121752654B003D4FB3 /* UIGestureRecognizer+IAExtras.h */,
+				E373A1131752654B003D4FB3 /* UIGestureRecognizer+IAExtras.m */,
+				E373A0F8175217BB003D4FB3 /* UIColor+LXAdditions.h */,
+				E373A0F9175217BB003D4FB3 /* UIColor+LXAdditions.m */,
+				E373A0FB175220AD003D4FB3 /* UIFont+LXAdditions.h */,
+				E373A0FC175220AD003D4FB3 /* UIFont+LXAdditions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		E373A0FE17522ECF003D4FB3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E373A0FF17522EE5003D4FB3 /* IADrawingUtilities.h */,
+				E373A10017522EE5003D4FB3 /* IADrawingUtilities.m */,
+			);
+			name = Helpers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E373A10217523AE5003D4FB3 /* ItemsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E373A10317523B3D003D4FB3 /* LXItemsViewController.h */,
+				E373A10417523B3D003D4FB3 /* LXItemsViewController.m */,
+				E373A10D17525B81003D4FB3 /* LXItemCell.h */,
+				E373A10E17525B81003D4FB3 /* LXItemCell.m */,
+			);
+			name = ItemsViewController;
+			sourceTree = "<group>";
+		};
+		E391B136175003B6009A8C1B /* FeedsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E391B133174FFF13009A8C1B /* LXFeedsViewController.h */,
+				E391B134174FFF13009A8C1B /* LXFeedsViewController.m */,
+				E391B13D17500449009A8C1B /* LXFeedsCollectionViewLayout.h */,
+				E391B13E17500449009A8C1B /* LXFeedsCollectionViewLayout.m */,
+				E391B141175006FD009A8C1B /* LXFeedCell.h */,
+				E391B142175006FD009A8C1B /* LXFeedCell.m */,
+			);
+			name = FeedsViewController;
+			sourceTree = "<group>";
+		};
 		E3B614E2172B21BC00D017CB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E333F414172B1F300089410C /* LXViewController.h */,
-				E333F415172B1F300089410C /* LXViewController.m */,
+				E391B136175003B6009A8C1B /* FeedsViewController */,
+				E373A10217523AE5003D4FB3 /* ItemsViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -254,13 +342,22 @@
 			files = (
 				E333F409172B1F300089410C /* main.m in Sources */,
 				E333F40D172B1F300089410C /* LXAppDelegate.m in Sources */,
-				E333F416172B1F300089410C /* LXViewController.m in Sources */,
 				E3B614E7172B263E00D017CB /* LXFeed.m in Sources */,
 				E3B615E8172B340B00D017CB /* LXVideo.m in Sources */,
 				E3B615ED172B347100D017CB /* LXVideoView.m in Sources */,
 				E3B615F0172B347F00D017CB /* LXVideoControlsView.m in Sources */,
 				E3B615F5172B35FA00D017CB /* LXFeedParser.m in Sources */,
 				E3CF968A174EB26F00D67968 /* LXItem.m in Sources */,
+				E391B135174FFF14009A8C1B /* LXFeedsViewController.m in Sources */,
+				E391B13F17500449009A8C1B /* LXFeedsCollectionViewLayout.m in Sources */,
+				E391B143175006FD009A8C1B /* LXFeedCell.m in Sources */,
+				E373A0FA175217BB003D4FB3 /* UIColor+LXAdditions.m in Sources */,
+				E373A0FD175220AD003D4FB3 /* UIFont+LXAdditions.m in Sources */,
+				E373A10117522EE5003D4FB3 /* IADrawingUtilities.m in Sources */,
+				E373A10517523B3D003D4FB3 /* LXItemsViewController.m in Sources */,
+				E373A10F17525B81003D4FB3 /* LXItemCell.m in Sources */,
+				E373A1141752654B003D4FB3 /* NSObject+IAExtras.m in Sources */,
+				E373A1151752654B003D4FB3 /* UIGestureRecognizer+IAExtras.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +443,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Luxor/Luxor-Prefix.pch";
 				INFOPLIST_FILE = "Luxor/Luxor-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -361,6 +462,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Luxor/Luxor-Prefix.pch";
 				INFOPLIST_FILE = "Luxor/Luxor-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

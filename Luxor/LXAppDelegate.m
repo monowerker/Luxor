@@ -7,19 +7,18 @@
 //
 
 #import "LXAppDelegate.h"
-
-#import "LXViewController.h"
+#import "LXFeedsViewController.h"
 
 @implementation LXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[LXViewController alloc] init];
-    } else {
-        self.viewController = [[LXViewController alloc] init];
-    }
+    UIViewController *viewController = [[LXFeedsViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    navigationController.navigationBarHidden = YES;
+    
+    self.viewController = navigationController;
 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
