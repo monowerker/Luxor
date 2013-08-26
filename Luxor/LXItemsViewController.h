@@ -10,6 +10,8 @@
 
 @interface LXItemsViewController : UIViewController
 
+@property (nonatomic, readwrite, strong) UIColor *baseColor;
+
 - (id)initWithItems:(NSArray *)items;
 
 @end

@@ -10,16 +10,19 @@
 // Models
 #import "LXItem.h"
 // Views
+#import "LXButtonCellTableView.h"
 #import "LXItemCell.h"
 // Utils
 #import "UIColor+LXAdditions.h"
 #import "UIGestureRecognizer+IAExtras.h"
+#import "UIControl+IAExtras.h"
 
 @interface LXItemsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, readwrite, strong) NSArray *items;
 @property (nonatomic, readwrite, strong) UITableView *tableView;
 @property (nonatomic, readwrite, assign) NSInteger *selectedRow;
+@property (nonatomic, readwrite, strong) NSIndexPath *expandedIndexPath;
 @property (nonatomic, readwrite, strong) NSMutableArray *expandedIndexPaths;
 
 @end
@@ -30,22 +33,27 @@ static NSString *reuseIdentifier = @"LXItemsViewControllerReuseIdentifier";
 
 @implementation LXItemsViewController
 
+
+#pragma mark - Lifecycle
+
 - (id)initWithItems:(NSArray *)items {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         self.items = items;
         [self.view addSubview:self.tableView];
-        self.expandedIndexPaths = [[NSMutableArray alloc] init];
+        self.expandedIndexPath = nil;
     }
     
     return self;
 }
+
 
 #pragma mark - Layout
 
 - (void)viewWillLayoutSubviews {
     self.tableView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
 }
+
 
 #pragma mark - Private properties
 
@@ -57,7 +65,7 @@ static NSString *reuseIdentifier = @"LXItemsViewControllerReuseIdentifier";
         _tableView.delegate = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.delaysContentTouches = NO;
-        _tableView.allowsMultipleSelection = YES;
+        
         [_tableView registerClass:[LXItemCell class] forCellReuseIdentifier:reuseIdentifier];
     }
     
@@ -75,76 +83,80 @@ static NSString *reuseIdentifier = @"LXItemsViewControllerReuseIdentifier";
     LXItemCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     LXItem *item = [self.items objectAtIndex:indexPath.row];
+    BOOL expanded = NO;
     
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.textLabel.text = item.title;
-    cell.textLabel.font = [UIFont fontWithName:@"AvenirNextCondensed-DemiBold" size:16.f];
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.backgroundColor = [UIColor clearColor];
-    cell.descriptionLabel.text = item.description;
-    cell.descriptionLabel.hidden = YES;
-    
-    for (NSIndexPath *idxPath in self.expandedIndexPaths) {
-        if (indexPath.row == idxPath.row) {
-            cell.expanded = YES;
-            cell.descriptionLabel.hidden = NO;
-        }
+    if ([indexPath isEqual:self.expandedIndexPath]) {
+        expanded = YES;
     }
+    
+    [self configureCell:cell withItem:item expanded:expanded forIndexPath:indexPath];
     
     return cell;
 }
 
+- (void)configureCell:(LXItemCell *)cell withItem:(LXItem *)item expanded:(BOOL)expanded forIndexPath:(NSIndexPath *)indexPath {
+    cell.textLabel.text = item.title;
+    cell.descriptionLabel.text = item.description;
+    
+    [cell.playButton removeEventHandlersForControlEvents:UIControlEventTouchUpInside];
+    
+	if (!expanded) {
+        cell.expanded = NO;
+		cell.descriptionLabel.hidden = YES;
+        cell.contentView.backgroundColor = [self.baseColor shiftBrightness:indexPath.row*0.025];
+	} else {
+        cell.contentView.backgroundColor = [UIColor blackColor];
+        cell.expanded = YES;
+        cell.descriptionLabel.hidden = NO;
+        
+        [cell.playButton addEventHandler:^(id sender) {
+            [self playItem:item];
+        } forControlEvents:UIControlEventTouchUpInside];
+    }
+}
+
+
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    LXItem *item = [self.items objectAtIndex:indexPath.row];
     
     CGFloat height = 44.f;
     
-    for (NSIndexPath *idxPath in self.expandedIndexPaths) {
-        if (indexPath.row == idxPath.row) {
-            UIFont *font = [UIFont fontWithName:@"AvenirNextCondensed-DemiBold" size:14.f];
-            height = [item.description sizeWithFont:font constrainedToSize:CGSizeMake(320.f, MAXFLOAT)].height+44.f+MARGIN;
-        }
+    if ([indexPath isEqual:self.expandedIndexPath]) {
+        LXItem *item = [self.items objectAtIndex:indexPath.row];
+        
+        NSDictionary *attrs = @
+        {
+        NSFontAttributeName: [UIFont fontWithName:@"AvenirNextCondensed-DemiBold" size:14.f],
+        };
+        
+        CGSize constrainToSize = CGSizeMake(self.view.frame.size.width-2*15.f, CGFLOAT_MAX);
+        
+        CGRect descriptionLabelRect = [item.description boundingRectWithSize:constrainToSize
+                                                                     options:NSStringDrawingUsesLineFragmentOrigin
+                                                                  attributes:attrs
+                                                                     context:nil];
+        
+        height = height + descriptionLabelRect.size.height+44.f+22.f;
     }
     
     return height;
 }
 
-/*- (void)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
-    unselectedColor = [tableView cellForRowAtIndexPath:indexPath].contentView.backgroundColor;
-}
-
-- (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    
-    CGFloat hue, saturation, brigthness, alpha;
-    [unselectedColor getHue:&hue saturation:&saturation brightness:&brigthness alpha:&alpha];
-    cell.contentView.backgroundColor = [UIColor colorWithHue:hue
-                                                  saturation:saturation*0.75f
-                                                  brightness:brigthness*0.75f
-                                                       alpha:alpha];
-}
-
-- (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    
-    cell.contentView.backgroundColor = unselectedColor;
-}*/
-
-/*- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    return indexPath;
-}*/
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    for (NSIndexPath *idxPath in self.expandedIndexPaths) {
-        if (indexPath.row == idxPath.row) {
-            [self collapseRowAtIndexPath:idxPath];
-            return;
-        }
+    if ([indexPath isEqual:self.expandedIndexPath]) {
+        self.expandedIndexPath = nil;
+        [self collapseRowAtIndexPath:indexPath];
+    } else {
+        [self expandRowAtIndexPath:indexPath];
     }
-    
-    [self expandRowAtIndexPath:indexPath];
+}
+
+
+#pragma mark - Private methods
+
+- (void)playItem:(LXItem *)item {
+    NSLog(@"%@", item.link);
 }
 
 
@@ -152,21 +164,32 @@ static NSString *reuseIdentifier = @"LXItemsViewControllerReuseIdentifier";
 
 - (void)expandRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.tableView beginUpdates];
-    [self.expandedIndexPaths addObject:indexPath];
-    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    [self.tableView endUpdates];
-}
-
-- (void)collapseRowAtIndexPath:(NSIndexPath *)indexPath {        
-    NSIndexPath *indexPathToRemove;
-    for (NSIndexPath *idxPath in self.expandedIndexPaths) {
-        if (idxPath.row == indexPath.row) {
-            indexPathToRemove = idxPath;
-        }
+    
+    //[self.expandedIndexPaths addObject:indexPath];
+    if (self.expandedIndexPath) {
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath, self.expandedIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else {
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
     
+    self.expandedIndexPath = indexPath;
+    
+    
+    [self.tableView endUpdates];
+    
+    { // Calculate and scroll expanded cell into view if needed
+        CGRect rowRect = [self.tableView rectForRowAtIndexPath:indexPath];
+        CGFloat viewHeight = self.tableView.contentOffset.y + self.tableView.contentSize.height;
+        CGFloat cellHeight = self.tableView.contentOffset.y + rowRect.origin.y + rowRect.size.height;
+        
+        if (cellHeight > viewHeight) {
+            [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        }
+    }
+}
+
+- (void)collapseRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.tableView beginUpdates];
-    [self.expandedIndexPaths removeObject:indexPathToRemove];
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     [self.tableView endUpdates];
 }

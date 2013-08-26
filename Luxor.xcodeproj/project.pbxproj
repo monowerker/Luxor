@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E305C0BA17C9850B001ED442 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E305C0B917C9850B001ED442 /* Images.xcassets */; };
 		E333F3FD172B1F300089410C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E333F3FC172B1F300089410C /* UIKit.framework */; };
 		E333F3FF172B1F300089410C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E333F3FE172B1F300089410C /* Foundation.framework */; };
 		E333F401172B1F300089410C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E333F400172B1F300089410C /* CoreGraphics.framework */; };
@@ -18,7 +19,6 @@
 		E333F413172B1F300089410C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E333F412172B1F300089410C /* Default-568h@2x.png */; };
 		E373A0FA175217BB003D4FB3 /* UIColor+LXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E373A0F9175217BB003D4FB3 /* UIColor+LXAdditions.m */; };
 		E373A0FD175220AD003D4FB3 /* UIFont+LXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E373A0FC175220AD003D4FB3 /* UIFont+LXAdditions.m */; };
-		E373A10117522EE5003D4FB3 /* IADrawingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E373A10017522EE5003D4FB3 /* IADrawingUtilities.m */; };
 		E373A10517523B3D003D4FB3 /* LXItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E373A10417523B3D003D4FB3 /* LXItemsViewController.m */; };
 		E373A10F17525B81003D4FB3 /* LXItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E373A10E17525B81003D4FB3 /* LXItemCell.m */; };
 		E373A1141752654B003D4FB3 /* NSObject+IAExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = E373A1111752654B003D4FB3 /* NSObject+IAExtras.m */; };
@@ -26,6 +26,7 @@
 		E391B135174FFF14009A8C1B /* LXFeedsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E391B134174FFF13009A8C1B /* LXFeedsViewController.m */; };
 		E391B13F17500449009A8C1B /* LXFeedsCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E391B13E17500449009A8C1B /* LXFeedsCollectionViewLayout.m */; };
 		E391B143175006FD009A8C1B /* LXFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E391B142175006FD009A8C1B /* LXFeedCell.m */; };
+		E39EFE9C17CABEDF001DFB87 /* LXButtonCellTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E39EFE9B17CABEDF001DFB87 /* LXButtonCellTableView.m */; };
 		E3AA227317512B3B00AD895E /* MAKVONotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AA227217512B3B00AD895E /* MAKVONotificationCenter.framework */; };
 		E3AA22751751393600AD895E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AA22741751393600AD895E /* QuartzCore.framework */; };
 		E3B614E7172B263E00D017CB /* LXFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B614E6172B263E00D017CB /* LXFeed.m */; };
@@ -37,9 +38,14 @@
 		E3B615F7172B3E6400D017CB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B615F6172B3E6400D017CB /* MobileCoreServices.framework */; };
 		E3B615F9172B3E6B00D017CB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B615F8172B3E6A00D017CB /* SystemConfiguration.framework */; };
 		E3CF968A174EB26F00D67968 /* LXItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CF9689174EB26E00D67968 /* LXItem.m */; };
+		E3E53CE917CBAECB003A9C99 /* LXButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E53CE617CBAECB003A9C99 /* LXButtonFactory.m */; };
+		E3E53CEA17CBAECB003A9C99 /* LXFontLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E53CE817CBAECB003A9C99 /* LXFontLibrary.m */; };
+		E3E53CED17CBAEE5003A9C99 /* UIControl+IAExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E53CEC17CBAEE5003A9C99 /* UIControl+IAExtras.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E3E53CF017CBAF31003A9C99 /* IADrawingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E53CEF17CBAF31003A9C99 /* IADrawingUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E305C0B917C9850B001ED442 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E333F3F9172B1F300089410C /* Luxor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luxor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E333F3FC172B1F300089410C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E333F3FE172B1F300089410C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,8 +63,6 @@
 		E373A0F9175217BB003D4FB3 /* UIColor+LXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LXAdditions.m"; sourceTree = "<group>"; };
 		E373A0FB175220AD003D4FB3 /* UIFont+LXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+LXAdditions.h"; sourceTree = "<group>"; };
 		E373A0FC175220AD003D4FB3 /* UIFont+LXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+LXAdditions.m"; sourceTree = "<group>"; };
-		E373A0FF17522EE5003D4FB3 /* IADrawingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IADrawingUtilities.h; sourceTree = "<group>"; };
-		E373A10017522EE5003D4FB3 /* IADrawingUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IADrawingUtilities.m; sourceTree = "<group>"; };
 		E373A10317523B3D003D4FB3 /* LXItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXItemsViewController.h; sourceTree = "<group>"; };
 		E373A10417523B3D003D4FB3 /* LXItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXItemsViewController.m; sourceTree = "<group>"; };
 		E373A10D17525B81003D4FB3 /* LXItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXItemCell.h; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		E391B13E17500449009A8C1B /* LXFeedsCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFeedsCollectionViewLayout.m; sourceTree = "<group>"; };
 		E391B141175006FD009A8C1B /* LXFeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFeedCell.h; sourceTree = "<group>"; };
 		E391B142175006FD009A8C1B /* LXFeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFeedCell.m; sourceTree = "<group>"; };
+		E39EFE9A17CABEDF001DFB87 /* LXButtonCellTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXButtonCellTableView.h; sourceTree = "<group>"; };
+		E39EFE9B17CABEDF001DFB87 /* LXButtonCellTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXButtonCellTableView.m; sourceTree = "<group>"; };
 		E3AA227217512B3B00AD895E /* MAKVONotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAKVONotificationCenter.framework; path = External/MAKVONotificationCenter.framework; sourceTree = "<group>"; };
 		E3AA22741751393600AD895E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E3B614E5172B263E00D017CB /* LXFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFeed.h; sourceTree = "<group>"; };
@@ -91,6 +97,14 @@
 		E3B615F8172B3E6A00D017CB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E3CF9688174EB26E00D67968 /* LXItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXItem.h; sourceTree = "<group>"; };
 		E3CF9689174EB26E00D67968 /* LXItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXItem.m; sourceTree = "<group>"; };
+		E3E53CE517CBAECB003A9C99 /* LXButtonFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXButtonFactory.h; path = Luxor/LXButtonFactory.h; sourceTree = "<group>"; };
+		E3E53CE617CBAECB003A9C99 /* LXButtonFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXButtonFactory.m; path = Luxor/LXButtonFactory.m; sourceTree = "<group>"; };
+		E3E53CE717CBAECB003A9C99 /* LXFontLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXFontLibrary.h; path = Luxor/LXFontLibrary.h; sourceTree = "<group>"; };
+		E3E53CE817CBAECB003A9C99 /* LXFontLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXFontLibrary.m; path = Luxor/LXFontLibrary.m; sourceTree = "<group>"; };
+		E3E53CEB17CBAEE5003A9C99 /* UIControl+IAExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIControl+IAExtras.h"; path = "Luxor/UIControl+IAExtras.h"; sourceTree = "<group>"; };
+		E3E53CEC17CBAEE5003A9C99 /* UIControl+IAExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIControl+IAExtras.m"; path = "Luxor/UIControl+IAExtras.m"; sourceTree = "<group>"; };
+		E3E53CEE17CBAF31003A9C99 /* IADrawingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IADrawingUtilities.h; path = Luxor/IADrawingUtilities.h; sourceTree = "<group>"; };
+		E3E53CEF17CBAF31003A9C99 /* IADrawingUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IADrawingUtilities.m; path = Luxor/IADrawingUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +176,7 @@
 		E333F403172B1F300089410C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E305C0B917C9850B001ED442 /* Images.xcassets */,
 				E333F404172B1F300089410C /* Luxor-Info.plist */,
 				E333F405172B1F300089410C /* InfoPlist.strings */,
 				E333F408172B1F300089410C /* main.m */,
@@ -192,8 +207,14 @@
 		E373A0FE17522ECF003D4FB3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				E373A0FF17522EE5003D4FB3 /* IADrawingUtilities.h */,
-				E373A10017522EE5003D4FB3 /* IADrawingUtilities.m */,
+				E3E53CEE17CBAF31003A9C99 /* IADrawingUtilities.h */,
+				E3E53CEF17CBAF31003A9C99 /* IADrawingUtilities.m */,
+				E3E53CEB17CBAEE5003A9C99 /* UIControl+IAExtras.h */,
+				E3E53CEC17CBAEE5003A9C99 /* UIControl+IAExtras.m */,
+				E3E53CE517CBAECB003A9C99 /* LXButtonFactory.h */,
+				E3E53CE617CBAECB003A9C99 /* LXButtonFactory.m */,
+				E3E53CE717CBAECB003A9C99 /* LXFontLibrary.h */,
+				E3E53CE817CBAECB003A9C99 /* LXFontLibrary.m */,
 			);
 			name = Helpers;
 			path = ..;
@@ -223,9 +244,17 @@
 			name = FeedsViewController;
 			sourceTree = "<group>";
 		};
+		E39EFE9D17CACA25001DFB87 /* VideoViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = VideoViewController;
+			sourceTree = "<group>";
+		};
 		E3B614E2172B21BC00D017CB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E39EFE9D17CACA25001DFB87 /* VideoViewController */,
 				E391B136175003B6009A8C1B /* FeedsViewController */,
 				E373A10217523AE5003D4FB3 /* ItemsViewController */,
 			);
@@ -261,6 +290,8 @@
 				E3B615EC172B347100D017CB /* LXVideoView.m */,
 				E3B615EE172B347F00D017CB /* LXVideoControlsView.h */,
 				E3B615EF172B347F00D017CB /* LXVideoControlsView.m */,
+				E39EFE9A17CABEDF001DFB87 /* LXButtonCellTableView.h */,
+				E39EFE9B17CABEDF001DFB87 /* LXButtonCellTableView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -327,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E333F407172B1F300089410C /* InfoPlist.strings in Resources */,
+				E305C0BA17C9850B001ED442 /* Images.xcassets in Resources */,
 				E333F40F172B1F300089410C /* Default.png in Resources */,
 				E333F411172B1F300089410C /* Default@2x.png in Resources */,
 				E333F413172B1F300089410C /* Default-568h@2x.png in Resources */,
@@ -341,7 +373,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E333F409172B1F300089410C /* main.m in Sources */,
+				E3E53CF017CBAF31003A9C99 /* IADrawingUtilities.m in Sources */,
 				E333F40D172B1F300089410C /* LXAppDelegate.m in Sources */,
+				E39EFE9C17CABEDF001DFB87 /* LXButtonCellTableView.m in Sources */,
 				E3B614E7172B263E00D017CB /* LXFeed.m in Sources */,
 				E3B615E8172B340B00D017CB /* LXVideo.m in Sources */,
 				E3B615ED172B347100D017CB /* LXVideoView.m in Sources */,
@@ -349,12 +383,14 @@
 				E3B615F5172B35FA00D017CB /* LXFeedParser.m in Sources */,
 				E3CF968A174EB26F00D67968 /* LXItem.m in Sources */,
 				E391B135174FFF14009A8C1B /* LXFeedsViewController.m in Sources */,
+				E3E53CED17CBAEE5003A9C99 /* UIControl+IAExtras.m in Sources */,
+				E3E53CE917CBAECB003A9C99 /* LXButtonFactory.m in Sources */,
 				E391B13F17500449009A8C1B /* LXFeedsCollectionViewLayout.m in Sources */,
 				E391B143175006FD009A8C1B /* LXFeedCell.m in Sources */,
 				E373A0FA175217BB003D4FB3 /* UIColor+LXAdditions.m in Sources */,
 				E373A0FD175220AD003D4FB3 /* UIFont+LXAdditions.m in Sources */,
-				E373A10117522EE5003D4FB3 /* IADrawingUtilities.m in Sources */,
 				E373A10517523B3D003D4FB3 /* LXItemsViewController.m in Sources */,
+				E3E53CEA17CBAECB003A9C99 /* LXFontLibrary.m in Sources */,
 				E373A10F17525B81003D4FB3 /* LXItemCell.m in Sources */,
 				E373A1141752654B003D4FB3 /* NSObject+IAExtras.m in Sources */,
 				E373A1151752654B003D4FB3 /* UIGestureRecognizer+IAExtras.m in Sources */,
@@ -436,6 +472,8 @@
 		E333F420172B1F300089410C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/External\"",
@@ -443,11 +481,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Luxor/Luxor-Prefix.pch";
 				INFOPLIST_FILE = "Luxor/Luxor-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -455,6 +495,8 @@
 		E333F421172B1F300089410C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/External\"",
@@ -462,11 +504,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Luxor/Luxor-Prefix.pch";
 				INFOPLIST_FILE = "Luxor/Luxor-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

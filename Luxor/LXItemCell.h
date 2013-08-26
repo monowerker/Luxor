@@ -10,6 +10,8 @@
 
 @interface LXItemCell : UITableViewCell
 
+@property (nonatomic, readwrite, strong) UIColor *backgroundColor;
+@property (nonatomic, readwrite, strong) UIButton *playButton;
 @property (nonatomic, readwrite, strong) UILabel *descriptionLabel;
 @property (nonatomic, readwrite, assign) BOOL expanded;
 

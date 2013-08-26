@@ -27,17 +27,27 @@ static NSString *LXFeedsViewReuseIdentifier = @"LXFeedsViewReuseIdentifier";
 
 @implementation LXFeedsViewController
 
-- (void)viewDidLoad {
-    self.feeds = [[NSMutableArray alloc] init];
 
-    self.collectionViewLayout = [[LXFeedsCollectionViewLayout alloc] init];
-    
-    LXFeed *feed = [LXFeed feedFromURL:[NSURL URLWithString:@"http://giardello.local/channel.xml"]];
-    if (feed) {
-        [self.feeds addObject:feed];
-    }
+#pragma mark - Lifecycle
+
+- (void)viewDidLoad {
+    { // Property init
+        self.collectionViewLayout = [[LXFeedsCollectionViewLayout alloc] init];
+        self.feeds = [[NSMutableArray alloc] init];
         
-    [self.view addSubview:self.collectionView];
+        LXFeed *feed = [LXFeed feedFromURL:[NSURL URLWithString:@"http://giardello.local/channel.xml"]];
+        if (feed) {
+            [self.feeds addObject:feed];
+        }
+    }
+    
+    { // View setup
+        [self.view addSubview:self.collectionView];
+    }
+    
+    { // Navigation item
+        self.navigationItem.title = @"Channels";
+    }
 }
 
 
@@ -71,7 +81,6 @@ static NSString *LXFeedsViewReuseIdentifier = @"LXFeedsViewReuseIdentifier";
                                                                  forIndexPath:indexPath];
     
     LXFeed *feed = [self.feeds objectAtIndex:indexPath.item];
-    
     cell.feed = feed;
     
     return cell;
@@ -84,6 +93,9 @@ static NSString *LXFeedsViewReuseIdentifier = @"LXFeedsViewReuseIdentifier";
     LXFeed *feed = [self.feeds objectAtIndex:indexPath.item];
     
     LXItemsViewController *itemsViewController = [[LXItemsViewController alloc] initWithItems:feed.items];
+    itemsViewController.baseColor = [[self.collectionView cellForItemAtIndexPath:indexPath] contentView].backgroundColor;
+    itemsViewController.navigationItem.title = feed.title;
+    
     [self.navigationController pushViewController:itemsViewController animated:YES];
 }
 

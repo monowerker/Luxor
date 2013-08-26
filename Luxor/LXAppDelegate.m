@@ -7,20 +7,26 @@
 //
 
 #import "LXAppDelegate.h"
+
+// -- Controllers
 #import "LXFeedsViewController.h"
+// -- Utils
+#import "LXFontLibrary.h"
 
 @implementation LXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
+    
     UIViewController *viewController = [[LXFeedsViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    navigationController.navigationBarHidden = YES;
-    
-    self.viewController = navigationController;
 
-    self.window.rootViewController = self.viewController;
+    { // Navigation Bar
+        navigationController.navigationBar.barStyle = UIBarStyleBlack;
+        navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    }
+
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
 
     return YES;

@@ -34,6 +34,10 @@
     if (self = [super initWithFrame:frame]) {
         //self.titleTextLayer = [[CATextLayer alloc] init];
         self.contentView.backgroundColor = [UIColor randomColor];
+        self.contentView.backgroundColor = [UIColor colorWithHue:arc4random()%256 / 256.f
+                                                      saturation:0.85f
+                                                      brightness:0.3f
+                                                           alpha:1.f];
         
         self.titleFont = [UIFont fontWithName:@"AvenirNextCondensed-DemiBold" size:16.f];
         [self.contentView addSubview:self.titleLabel];

@@ -45,4 +45,41 @@
                            alpha:1.];
 }
 
+- (UIColor *)desaturate:(CGFloat)level {
+    CGFloat hue;
+    CGFloat saturation;
+    CGFloat brightness;
+    CGFloat alpha;
+    
+    [self getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
+    saturation = saturation * (1-level);
+    
+    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha];
+}
+
+- (UIColor *)shiftHue:(CGFloat)level {
+    CGFloat hue;
+    CGFloat saturation;
+    CGFloat brightness;
+    CGFloat alpha;
+    
+    [self getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
+    hue = hue + level;
+    
+    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha];
+}
+
+- (UIColor *)shiftBrightness:(CGFloat)level {
+    CGFloat hue;
+    CGFloat saturation;
+    CGFloat brightness;
+    CGFloat alpha;
+    
+    [self getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
+    brightness = brightness + level;
+    
+    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha];
+}
+
+
 @end

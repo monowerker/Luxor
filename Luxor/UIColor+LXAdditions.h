@@ -12,5 +12,7 @@
 
 + (UIColor *)colorFromHexString:(NSString *)hexString;
 + (UIColor *)randomColor;
+- (UIColor *)shiftHue:(CGFloat)level;
+- (UIColor *)shiftBrightness:(CGFloat)level;
 
 @end
